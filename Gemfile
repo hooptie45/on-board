@@ -12,8 +12,6 @@ gem 'omniauth'
 gem 'omniauth-linkedin'
 gem 'omniauth-twitter'
 
-gem 'sqlite3'
-
 gem "less-rails"
 gem 'sass-rails', '>= 3.2' # sass-rails needs to be higher than 3.2
 gem 'bootstrap-sass', '~> 3.1.1'
@@ -32,9 +30,11 @@ gem 'debugger'
 gem 'ox'
 gem 'oj'
 
+gem 'pg'
 gem 'hashie'
 gem 'commands'
 group :development, :test do
+  gem 'sqlite3'
   gem 'rails_layout'
   gem 'guard-rspec'
   gem 'rspec-given'
@@ -52,6 +52,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :production do
+end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
